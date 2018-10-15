@@ -45,4 +45,13 @@ public class Ticket {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "Ticket{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", ticketState=" + ticketState +
+                '}';
+    }
 }
