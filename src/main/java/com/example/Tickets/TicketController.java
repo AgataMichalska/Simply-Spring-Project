@@ -1,5 +1,6 @@
 package com.example.Tickets;
 
+import jdk.net.SocketFlow;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,9 +22,13 @@ public class TicketController {
         return ticketService.getAllTickets();
     }
 
+    @PutMapping("/tickets/{id}")
+    public void editTicket(@PathVariable Integer id) {
+        ticketService.edit(id);
+    }
 
     @PostMapping("/tickets")
-    public void postBook(@RequestBody Ticket t) {
+    public void postTicket(@RequestBody Ticket t) {
         ticketService.saveTicket(t);
     }
 

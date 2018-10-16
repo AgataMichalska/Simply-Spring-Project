@@ -11,7 +11,6 @@ public class Ticket {
     private String message;
     @Enumerated(EnumType.STRING)
     private TicketState ticketState;
-    //private boolean isRead;
 
     public Ticket() {
     }
