@@ -24,8 +24,8 @@ public class TicketService {
         ticketRepository.save(t);
     }
 
-    public void remove(Ticket id) {
-        ticketRepository.delete(id);
+    public void remove(Integer id) {
+        ticketRepository.deleteById(id);
     }
 
     public void edit(Integer id) {
